@@ -81,7 +81,8 @@ class tiff:
             if loadImage == True:
                 self.loadImage()
             else:
-                self.tiffGetTags()
+                pass
+            self.tiffGetTags()
                 
         elif isinstance(file, str) and os.path.exists(file)==False and isinstance(array,np.ndarray):
             
