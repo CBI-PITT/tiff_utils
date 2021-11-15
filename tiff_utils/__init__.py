@@ -4,4 +4,4 @@ except ImportError:
     __version__ = "unknown"
 
 
-from tiff_utils import tiff
+from .tiff_utils import tiff

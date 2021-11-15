@@ -1,5 +1,5 @@
 import os
-from tiff_utils.tiff_utils import tiff
+from tiff_utils import tiff
 import numpy as np
 
 
