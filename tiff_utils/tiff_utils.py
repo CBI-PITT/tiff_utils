@@ -299,13 +299,14 @@ class tiff:
     
     
     
-    def write(self,compression='zlib', tile=(512,512)):
+    def write(self,compression='zlib', tile=(512,512), bigTiff=None):
         ## NOTE: This version of tifffile requires all lowercase
         ## and does not allow export of metadata
         ## Does not allow specification of compression other than lzma
         ## Newer version of skimage may require edits 
         
-        bigTiff = self.bigTiffRequired()
+        if bigTiff is None:
+            bigTiff = self.bigTiffRequired()
             
         with tifffile.TiffWriter(self.filePathComplete,bigtiff=bigTiff) as tiffout: ###############Change True to bigTiff
             
